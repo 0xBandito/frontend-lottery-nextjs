@@ -1,17 +1,16 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import ManuelHeader from "../components/ManualHeader"
-
+import Header from "../components/Header"
+import LotteryEntrance from "../components/LotteryEntrance"
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="px-4 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 ... h-screen">
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Smart Contract Lottery" />
+        <title>CYF LOTTERY</title>
+        <meta name="description" content="CYF Lottery" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ManuelHeader />
-      WELCOME TO THE LOTTERY. ENTER TO WIN SOME ETH.
+      <Header />
+      <LotteryEntrance />
     </div>
   )
 }

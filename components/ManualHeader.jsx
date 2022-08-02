@@ -3,7 +3,7 @@ import { useMoralis } from "react-moralis";
 
 export default function ManualHeader() {
 
-    const { enableWeb3, account, isWeb3Enabled, Moralis, deactivateWeb3 } = useMoralis();
+    const { enableWeb3, account, isWeb3Enabled, isWeb3EnableLoading, Moralis, deactivateWeb3 } = useMoralis();
 
     useEffect(() => {
         if (isWeb3Enabled) return
@@ -32,7 +32,7 @@ export default function ManualHeader() {
 
     return(
     <div>
-        {account ? (<div>Connected to {account.slice(0,6)}...{account.slice(account.length - 4)} !</div>) : (<button onClick={connectWallet}>Connect</button>)}
+        {account ? (<div>Connected to {account.slice(0,6)}...{account.slice(account.length - 4)} !</div>) : (<button onClick={connectWallet} disabled={isWeb3EnableLoading}>Connect</button>)}
         
     </div>
     )
